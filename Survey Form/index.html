@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" />
+    <title>Encuesta</title>
+</head>
+
+<body>
+    <h1 id="title">Encuesta de servicios prestados</h1>
+    <p id="description">Esta encuesta me ayudará a evaluar mis capacidades como docente</p>
+    <form action="post" id="survey-form">
+        <fieldset>
+            <label for="name" id="name-label">Nombre <input type="text" id="name"
+                    placeholder="Ingrese su nombre de usuario" required></label>
+            <label for="email" id="email-label">Email <input type="email" id="email"
+                    placeholder="Ingrese su correo electrónico" required></label>
+            <label for="number" id="number-label">Edad <input type="number" id="number" placeholder="Ingrese su edad"
+                    min=16 max=110 required></label>
+        </fieldset>
+        <fieldset>
+            <label for="dropdown">¿Cómo me encontró?
+                <select name="dropdown" id="dropdown">
+                    <option value="">Selecciona una opción</option>
+                    <option value="1">Anuncio en Google</option>
+                    <option value="2">Anuncio en Facebook</option>
+                    <option value="3">Anuncio en Instagram</option>
+                    <option value="4">Anuncio en X</option>
+                    <option value="5">Anuncio en TikTok</option>
+                    <option value="6">Me lo recomendó un amigo</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Califique el material de clase</legend>
+            <label for="material-Malo">
+                <input type="radio" value="material-Malo" id="material-Malo" name="material-value">Malo
+            </label>
+            <label for="material-Regular"><input type="radio" value="material-Regular" id="material-Regular"
+                    name="material-value">Regular</label>
+            <label for="material-Bueno"><input type="radio" value="material-Bueno" id="material-Bueno"
+                    name="material-value" checked>Bueno</label>
+            <label for="material-Excelente"><input type="radio" value="material-Excelente" id="material-Excelente"
+                    name="material-value">Excelente</label>
+            <legend>Califique la oratoria del expositor</legend>
+            <label for="oratoria-Malo"><input type="radio" value="oratoria-Malo" i d="material-Malo"
+                    name="oratoria-value">Malo</label>
+            <label for="oratoria-Regular"><input type="radio" value="oratoria-Regular" d="material-Regular"
+                    name="oratoria-value">Regular</label>
+            <label for="oratoria-Bueno"><input type="radio" value="oratoria-Bueno" id="material-Bueno"
+                    name="oratoria-value" checked>Bueno</label>
+            <label for="oratoria-Excelente"><input type="radio" value="oratoria-Excelente" id="material-Excelente"
+                    name="oratoria-value">Excelente</label>
+            <legend>Califique la disponibilidad del presentados para resolver cuestiones fuera del programa</legend>
+            <label for="disponibilidad-Malo"><input type="radio" value="disponibilidad-Malo" id="material-Malo"
+                    name="disponibilidad-value">Malo</label>
+            <label for="disponibilidad-Regular"><input type="radio" value="disponibilidad-Regular" id="material-Regular"
+                    name="disponibilidad-value">Regular</label>
+            <label for="disponibilidad-Bueno"><input type="radio" value="disponibilidad-Bueno" id="material-Bueno"
+                    name="disponibilidad-value" checked>Bueno</label>
+            <label for="disponibilidad-Excelente"><input type="radio" value="disponibilidad-Excelente"
+                    id="material-Excelente" name="disponibilidad-value">Excelente</label>
+        </fieldset>
+        <fieldset>
+            <legend>Sobre qué otros temas le interesaría un curso o tutorial</legend>
+            <label for="tema-1"><input type="checkbox" name="tema-1" value="tema-1" id="tema-1"> Introducción a la
+                Ingeniería
+                Energética</label>
+            <label for="tema-2"><input type="checkbox" name="tema-2" value="tema-2" id="tema-2"> Energías Renovables</label>
+            <label for="tema-3"><input type="checkbox" name="tema-3" value="tema-3" id="tema-3"> Eficiencia Energética en Edificios</label>
+            <label for="tema-4"><input type="checkbox" name="tema-4" value="tema-4" id="tema-4"> Fundamentos de Petróleo y Gas Natural</label>
+            <label for="tema-5"><input type="checkbox" name="tema-5" value="tema-5" id="tema-5"> Sistemas de Energía Eléctrica</label>
+            <label for="tema-6"><input type="checkbox" name="tema-6" value="tema-6" id="tema-6"> Introducción a la Ingeniería Química</label>
+            <label for="tema-7"><input type="checkbox" name="tema-7" value="tema-7" id="tema-7"> Ingeniería de Reacciones Químicas</label>
+            <label for="tema-8"><input type="checkbox" name="tema-8" value="tema-8" id="tema-8"> Biotecnología Industrial</label>
+            <label for="tema-9"><input type="checkbox" name="tema-9" value="tema-9" id="tema-9"> Nanotecnología para la Ingeniería Química</label>
+            <label for="tema-10"><input type="checkbox" name="tema-10" value="tema-10" id="tema-10"> Fundamentos de Ingeniería de Procesos</label>
+
+        </fieldset>
+        <fieldset>
+            <legend>¿Nos dejás un comentario?</legend>
+            <label for="comentario">
+                <textarea name="comentario" id="comentario"
+                    placeholder="Se utilizan para mejorar y son muy valiosos"></textarea>
+            </label>
+        </fieldset>
+        <fieldset>
+            <input type="submit" id="submit" value="Enviar todo y terminar">
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
