@@ -1,10 +1,17 @@
-﻿body {
+﻿.color1 { color: #f65408 }
+.color2 { color: #fcc1a5 }
+.color3 { color: #802c04 }
+.color4 { color: #6280a2 }
+.color5 { color: #d1bac4 }
+body {
     margin: 0 auto;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #222222;
-    background-image: url("\StockCake-Serene lake sunrise_1721825784.jpg");
+    background: url("\StockCake-Serene lake sunrise_1721825784.jpg"), linear-gradient(to bottom, #fcc1a5,#6280a2,#d1bac4);
+    /* En caso que la imagen no cargue  entonces cargará un gradiente de colores.*/
+    background-size: 100% 100%;
     max-width: 600px;
 
 }
@@ -26,6 +33,21 @@ fieldset {
 
 }
 
-label {
+.block {
     display: block;
 }
+input[type="text"], input[type="email"] {
+    width: 200px
+}
+input[type="number"] {
+    width: 110px
+}
+input[type="radio"] {
+    margin-left: 10px
+}
+.calificacion{
+    color: red;
+  }
+/* label {
+    display: block;
+} */

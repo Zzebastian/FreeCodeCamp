@@ -13,11 +13,11 @@
     <p id="description">Esta encuesta me ayudará a evaluar mis capacidades como docente</p>
     <form action="post" id="survey-form">
         <fieldset>
-            <label for="name" id="name-label">Nombre <input type="text" id="name"
+            <label for="name" id="name-label" class="block">Nombre <input type="text" id="name"
                     placeholder="Ingrese su nombre de usuario" required></label>
-            <label for="email" id="email-label">Email <input type="email" id="email"
+            <label for="email" id="email-label" class="block">Email <input type="email" id="email"
                     placeholder="Ingrese su correo electrónico" required></label>
-            <label for="number" id="number-label">Edad <input type="number" id="number" placeholder="Ingrese su edad"
+            <label for="number" id="number-label" class="block">Edad <input type="number" id="number" placeholder="Ingrese su edad"
                     min=16 max=110 required></label>
         </fieldset>
         <fieldset>
@@ -33,7 +33,7 @@
                 </select>
             </label>
         </fieldset>
-        <fieldset>
+        <fieldset class="calificacion">
             <legend>Califique el material de clase</legend>
             <label for="material-Malo">
                 <input type="radio" value="material-Malo" id="material-Malo" name="material-value">Malo
