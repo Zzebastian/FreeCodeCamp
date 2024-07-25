@@ -13,11 +13,11 @@
     <p id="description">Esta encuesta me ayudará a evaluar mis capacidades como docente</p>
     <form action="post" id="survey-form">
         <fieldset>
-            <label for="name" id="name-label" class="block">Nombre <input type="text" id="name"
+            <label for="name" id="name-label" class="block">Nombre: <input type="text" id="name"
                     placeholder="Ingrese su nombre de usuario" required></label>
-            <label for="email" id="email-label" class="block">Email <input type="email" id="email"
+            <label for="email" id="email-label" class="block">Email: <input type="email" id="email"
                     placeholder="Ingrese su correo electrónico" required></label>
-            <label for="number" id="number-label" class="block">Edad <input type="number" id="number" placeholder="Ingrese su edad"
+            <label for="number" id="number-label" class="block-fin">Edad: <input type="number" id="number" placeholder="Ingrese su edad"
                     min=16 max=110 required></label>
         </fieldset>
         <fieldset>
@@ -33,7 +33,7 @@
                 </select>
             </label>
         </fieldset>
-        <fieldset class="calificacion">
+        <fieldset>
             <legend>Califique el material de clase</legend>
             <label for="material-Malo">
                 <input type="radio" value="material-Malo" id="material-Malo" name="material-value">Malo
@@ -44,7 +44,7 @@
                     name="material-value" checked>Bueno</label>
             <label for="material-Excelente"><input type="radio" value="material-Excelente" id="material-Excelente"
                     name="material-value">Excelente</label>
-            <legend>Califique la oratoria del expositor</legend>
+            <legend class="calificacion">Califique la oratoria del expositor</legend>
             <label for="oratoria-Malo"><input type="radio" value="oratoria-Malo" i d="material-Malo"
                     name="oratoria-value">Malo</label>
             <label for="oratoria-Regular"><input type="radio" value="oratoria-Regular" d="material-Regular"
@@ -53,7 +53,7 @@
                     name="oratoria-value" checked>Bueno</label>
             <label for="oratoria-Excelente"><input type="radio" value="oratoria-Excelente" id="material-Excelente"
                     name="oratoria-value">Excelente</label>
-            <legend>Califique la disponibilidad del presentados para resolver cuestiones fuera del programa</legend>
+            <legend class="calificacion">Califique la disponibilidad del presentados para resolver cuestiones fuera del programa</legend>
             <label for="disponibilidad-Malo"><input type="radio" value="disponibilidad-Malo" id="material-Malo"
                     name="disponibilidad-value">Malo</label>
             <label for="disponibilidad-Regular"><input type="radio" value="disponibilidad-Regular" id="material-Regular"
@@ -65,18 +65,18 @@
         </fieldset>
         <fieldset>
             <legend>Sobre qué otros temas le interesaría un curso o tutorial</legend>
-            <label for="tema-1"><input type="checkbox" name="tema-1" value="tema-1" id="tema-1"> Introducción a la
+            <label for="tema-1" class="block"><input type="checkbox" name="tema-1" value="tema-1" id="tema-1"> Introducción a la
                 Ingeniería
                 Energética</label>
-            <label for="tema-2"><input type="checkbox" name="tema-2" value="tema-2" id="tema-2"> Energías Renovables</label>
-            <label for="tema-3"><input type="checkbox" name="tema-3" value="tema-3" id="tema-3"> Eficiencia Energética en Edificios</label>
-            <label for="tema-4"><input type="checkbox" name="tema-4" value="tema-4" id="tema-4"> Fundamentos de Petróleo y Gas Natural</label>
-            <label for="tema-5"><input type="checkbox" name="tema-5" value="tema-5" id="tema-5"> Sistemas de Energía Eléctrica</label>
-            <label for="tema-6"><input type="checkbox" name="tema-6" value="tema-6" id="tema-6"> Introducción a la Ingeniería Química</label>
-            <label for="tema-7"><input type="checkbox" name="tema-7" value="tema-7" id="tema-7"> Ingeniería de Reacciones Químicas</label>
-            <label for="tema-8"><input type="checkbox" name="tema-8" value="tema-8" id="tema-8"> Biotecnología Industrial</label>
-            <label for="tema-9"><input type="checkbox" name="tema-9" value="tema-9" id="tema-9"> Nanotecnología para la Ingeniería Química</label>
-            <label for="tema-10"><input type="checkbox" name="tema-10" value="tema-10" id="tema-10"> Fundamentos de Ingeniería de Procesos</label>
+            <label for="tema-2" class="block"><input type="checkbox" name="tema-2" value="tema-2" id="tema-2"> Energías Renovables</label>
+            <label for="tema-3" class="block"><input type="checkbox" name="tema-3" value="tema-3" id="tema-3"> Eficiencia Energética en Edificios</label>
+            <label for="tema-4" class="block"><input type="checkbox" name="tema-4" value="tema-4" id="tema-4"> Fundamentos de Petróleo y Gas Natural</label>
+            <label for="tema-5" class="block"><input type="checkbox" name="tema-5" value="tema-5" id="tema-5"> Sistemas de Energía Eléctrica</label>
+            <label for="tema-6" class="block"><input type="checkbox" name="tema-6" value="tema-6" id="tema-6"> Introducción a la Ingeniería Química</label>
+            <label for="tema-7" class="block"><input type="checkbox" name="tema-7" value="tema-7" id="tema-7"> Ingeniería de Reacciones Químicas</label>
+            <label for="tema-8" class="block"><input type="checkbox" name="tema-8" value="tema-8" id="tema-8"> Biotecnología Industrial</label>
+            <label for="tema-9" class="block"><input type="checkbox" name="tema-9" value="tema-9" id="tema-9"> Nanotecnología para la Ingeniería Química</label>
+            <label for="tema-10" class="block-fin"><input type="checkbox" name="tema-10" value="tema-10" id="tema-10"> Fundamentos de Ingeniería de Procesos</label>
 
         </fieldset>
         <fieldset>

@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #222222;
-    background: url("\StockCake-Serene lake sunrise_1721825784.jpg"), linear-gradient(to bottom, #fcc1a5,#6280a2,#d1bac4);
+    background: url("\StockCake-Serene lake sunrise_1721825784.jpg-"), linear-gradient(to bottom,#d1bac4, #fcc1a5,#6280a2);
     /* En caso que la imagen no cargue  entonces cargará un gradiente de colores.*/
     background-size: 100% 100%;
     max-width: 600px;
@@ -19,12 +19,10 @@ body {
 h1, p {
     text-align: center;
 }
-
 form {
     min-width: 330;
     padding: 20px 0;
 }
-
 fieldset {
     padding-bottom: 20px;
     margin-top: 10px;
@@ -32,22 +30,34 @@ fieldset {
     border-style: none none solid none;
 
 }
-
-.block {
-    display: block;
+legend {
+    padding: 10px 0px 0px;
+}
+textarea {
+    width: 100%;
+    height: 100px;
 }
 input[type="text"], input[type="email"] {
-    width: 200px
+    width: 200px;
 }
 input[type="number"] {
-    width: 110px
+    width: 110px;
 }
 input[type="radio"] {
-    margin-left: 10px
+    margin-left: 10px;
+}
+/* SEGUIR ACÁ */
+input[type="submit"] {
+    color: white;
+    background-color: #a28361;
 }
 .calificacion{
-    color: red;
+    padding: 20px 0px 0px;
   }
-/* label {
+.block {
     display: block;
-} */
+    margin-bottom: 5px;
+}
+.block-fin {
+    display: block;
+}
