@@ -1,8 +1,9 @@
-﻿.color1 { color: #f65408 }
+﻿/* Colores de fondo elegido
+.color1 { color: #f65408 }
 .color2 { color: #fcc1a5 }
 .color3 { color: #802c04 }
 .color4 { color: #6280a2 }
-.color5 { color: #d1bac4 }
+.color5 { color: #d1bac4 } */
 body {
     margin: 0 auto;
     padding: 0;
@@ -36,6 +37,7 @@ legend {
 textarea {
     width: 100%;
     height: 100px;
+    font-size: 90%;
 }
 input[type="text"], input[type="email"] {
     width: 200px;
@@ -49,7 +51,10 @@ input[type="radio"] {
 /* SEGUIR ACÁ */
 input[type="submit"] {
     color: white;
+    font-size: 100%;
     background-color: #a28361;
+    display: block;
+    margin: auto auto;
 }
 .calificacion{
     padding: 20px 0px 0px;
@@ -60,4 +65,7 @@ input[type="submit"] {
 }
 .block-fin {
     display: block;
+}
+.none-border {
+    border-style: none;
 }
