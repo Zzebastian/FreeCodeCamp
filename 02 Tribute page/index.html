@@ -25,20 +25,22 @@
     </header>
     <main id="main">
         <section id="introduction" role="region" aria-labelledby="introduction">
-            <div>
+            <div id="img-div">
                 <img id="image"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Roca%2C_Julio_Argentino.jpg/220px-Roca%2C_Julio_Argentino.jpg"
                     alt="">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mapa_de_la_evoluci%C3%B3n_territorial_de_Argentina_%281869-1881%29.png/250px-Mapa_de_la_evoluci%C3%B3n_territorial_de_Argentina_%281869-1881%29.png"
-                    alt="">
-                <p>A la izquierda, un retrato del presidente durante su primer mandato (1880), a la derecha la
-                    ampliación
-                    del territorio argentino, en gris, el territorio de Argentina antes su presidencia</p>
+                <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mapa_de_la_evoluci%C3%B3n_territorial_de_Argentina_%281869-1881%29.png/250px-Mapa_de_la_evoluci%C3%B3n_territorial_de_Argentina_%281869-1881%29.png"
+                    alt=""> -->
+                <div id="img-caption">
+                    <p>A la izquierda, un retrato del presidente durante su primer mandato (1880), a la derecha la
+                        ampliación
+                        del territorio argentino, en gris, el territorio de Argentina antes su presidencia</p>
+                </div>
             </div>
             <div class="divider"></div>
         </section>
-        <section id="timeline" role="region" aria-labelledby="timeline">
-            <div>
+        <section id="tribute-info" role="region" aria-labelledby="timeline">
+            <div id="timeline">
                 <h2>Cronología</h2>
                 <ul class="crono">
                     <li>1843: Nace en San Miguel de Tucumán.
@@ -60,9 +62,9 @@
 
             </div>
             <div class="divider"></div>
-        </section>
-        <section id="final-frase" role="region" aria-labelledby="final-frase">
-            <div>
+
+
+            <div id="final-frase">
                 <h2>Aspectos clave de su gobierno</h2>
                 <p>Conquista del Desierto: Una serie de campañas militares contra los pueblos originarios de la
                     Patagonia y la Pampa, que permitió la expansión territorial argentina. <br>
@@ -77,11 +79,24 @@
             </div>
             <div class="divider medium"></div>
         </section>
+        <section id="end" role="region" aria-labelledby="end">
+            <div>
+                <p>Según el artículo de Wikipedia sobre la <a id="tribute-link" target="_blank"
+                        href="https://es.wikipedia.org/wiki/Julio_Argentino_Roca">Julio Argentino Roca</a> y <a
+                        id="tribute-link2" target="_blank"
+                        href="https://es.wikipedia.org/wiki/Conquista_del_Desierto">Conquista del Desierto</a></p>
+            </div>
+        </section>
     </main>
     <footer>
-        <section id="end" role="region" aria-labelledby="end">
-            <div></div>
-        </section>
+
+        <div>
+
+            <p>Esta web fue creada para cumplir con una etapa de certificación en <a
+                    href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-tribute-page-project/build-a-tribute-page">freeCodeCamp</a>,
+                por <a href="https://github.com/Zzebastian">Zzebastian</a></p>
+        </div>
+
     </footer>
 </body>
 
