@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>Gestión de empleados</header>
+        <a class="nav-link" href="#Intro">Intro</a>
+        <a class="nav-link" href="#Consideraciones_especiales">Consideraciones especiales</a>
+        <a class="nav-link" href="#Como_transformar_todo_en_un_único_código">Como transformar todo en un único
+            código</a>
+        <a class="nav-link" href="#Librerías_necesarias_para_operar_el_programa">Librerías necesarias para operar el
+            programa</a>
+        <a class="nav-link" href="#Funciones_especiales">Funciones especiales</a>
+        <a class="nav-link" href="#Capturas_de_pantallas">Capturas de pantallas</a>
+
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Intro">
+            <header>Intro</header>
+            <p>El trabajo práctico se encuentra alojado el la plataforma Replit, bajo el nombre <a
+                    href="https://replit.com/@SebastianScheve/gestiondeempleados#main.py">gestion_de_empleados</a>
+                consta de 5
+                archivos:</p>
+            <ul>
+
+                <li><span>database.py</span>: un BackUp de la base de datos, que consiste en un script capaz de
+                    re-generar la base de
+                    datos original utilizando SQLite3.
+
+                </li>
+                <li><span>gestion_empleados.db</span>: la base de datos sobre la cual se opera con el programa.
+
+                </li>
+                <li><span>main.py</span>: el programa donde se crea la interfaz gráfica en la cual el usuario
+                    trabaja y posee
+                    dos claves: {"admin": "123456"} y {"": "") que habilita a ingresar automáticamente. Las contraseñas
+                    se
+                    encuentran con un HASH, pues el archivo se compartió a través de Replit y dicha aplicación lo hace
+                    público para todo el mundo. Esto puede saltarse si se modifica la línea 703 del código y se cambia
+                    _Inicial() por _Seleccion()
+
+                </li>
+                <li><span>funcionesBdD.py</span>: el conjunto de funciones que operan sobre la base de datos. Se hizo
+                    así
+                    porque las
+                    mismas se fueron creando y probando individualmente y en paralelo a la construcción de las pantallas
+                    en
+                    Tkinter
+
+                </li>
+                <li><span>Resumen.csv</span>: una muestra del archivo exportable que genera el programa, donde se puede
+                    observar en
+                    detalle cómo funciona la capacidad de extraer datos del programa a un archivo externo.</li>
+
+            </ul>
+        </section>
+        <section class="main-section" id="Consideraciones_especiales">
+            <header>Consideraciones especiales</header>
+            <p>Si bien está habilitada la carga de horas extras, el sistema no carga las mismas en la pantalla Detalle
+                del
+                mes,
+                esto se debe principalmente a cuestiones estéticas y de tiempo.</p>
+
+        </section>
+        <section class="main-section" id="Como_transformar_todo_en_un_único_código">
+            <header>Como transformar todo en un único código</header>
+            <p>Si deseas combinar todo el contenido de los archivos mencionados en un solo programa, puedes seguir estos
+                pasos:</p>
+            <ol>
+                <li>Abre cada archivo en un editor de texto o IDE, incluyendo "PantallasTkinter.py", "funcionesBdD.py" y
+                    cualquier otro archivo relevante para tu programa.
+
+                </li>
+                <li>Copia y pega el contenido de cada archivo en el archivo principal de tu programa,
+                    "PantallasTkinter.py".
+                    Asegúrate de pegar el contenido en los lugares adecuados, respetando la estructura y la lógica del
+                    programa.
+
+                </li>
+                <li>Asegúrate de resolver cualquier conflicto de nombres o duplicación de código que pueda surgir al
+                    combinar los archivos. Asegúrate de que no haya funciones, variables o importaciones duplicadas y
+                    que
+                    todo esté correctamente organizado.
+
+                </li>
+                <li>Una vez que hayas combinado todo el código en un solo archivo, puedes seguir los pasos mencionados
+                    anteriormente para convertirlo en un archivo ejecutable, utilizando herramientas como PyInstaller o
+                    cx_Freeze.
+            </ol>
+            <p>Recuerda revisar y probar tu programa después de combinar los archivos para asegurarte de que todo
+                funcione
+                correctamente y que no haya errores o incompatibilidades entre las diferentes partes del código.</p>
+
+        </section>
+        <section class="main-section" id="Librerías_necesarias_para_operar_el_programa">
+            <header>Librerías necesarias para operar el programa</header>
+            <p>Para operar el programa es necesario importar diversas librerías</p>
+            <code>
+            import os, time, hashlib, datetime <br>
+            import tkinter as tk<br>
+            from tkinter import ttk<br>
+            from datetime import datetime <br>
+            import sqlite3
+        </code>
+
+        </section>
+        <section class="main-section" id="Funciones_especiales">
+            <header>Funciones especiales</header>
+            <p>Dentro del código se pueden encontrar algunas funciones particulares, las cuales se encargan de realizar
+                tareas de comprobación, protección o modificación de la base de datos</p>
+            <section class="second-section">
+                <header>Limpiar la pantalla</header>
+                <p>Esta función elimina todos los elementos en la pantalla permitiendo así que se generen nuevos, sin
+                    que
+                    existan problemas de compatibilidad</p>
+                <code>def borrarElementos(): <br>
+            &emsp;for elemento in botones: <br>
+            &emsp;elemento.destroy()</code>
+            </section>
+            <section class="second-section">
+                <header>Ingresar al programa</header>
+                <p>Para el ingreso, el programa solicita un usuario y una contraseña. Con el fin de evitar que se
+                    conozca la
+                    contraseña mirando el código se utiliza un hash. Actualmente el mismo corresponde a un espacio
+                    vacío.
+                </p>
+                <code>
+            def usrPwd():<br>
+            &emsp;global usuarioT, passwordT, ingreso<br>
+            &emsp;user = usuarioT.get("1.0", "end")<br>
+            &emsp;user = user.lower().strip()<br>
+            &emsp;passw = passwordT.get("1.0", "end")<br>
+            &emsp;passw = passw.strip()<br>
+            &emsp;diccionario={"":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",<br>
+            &emsp;"admin": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"}<br>
+            &emsp;passw = hashlib.sha256(passw.encode()).hexdigest()<br>
+            
+            &emsp;if user in diccionario and diccionario[user] == passw:<br>
+            &emsp;time.sleep(1)<br>
+            &emsp;ingreso.destroy()<br>
+            &emsp;_Seleccion()<br>
+            &emsp;else:<br>
+            &emsp;&emsp;ingreso.destroy()<br>
+            &emsp;&emsp;ingreso = tk.Label(text="Usuario o Contraseña incorrectos", fg = "red", font = ("Times New Roman", 12, "bold"))<br>
+            &emsp;&emsp;ingreso.pack()<br>
+
+        </code>
+            </section>
+            <section class="second-section">
+                <header>Conectar con la base de datos</header>
+                <p>A través del siguiente código, se puede produce la conección con la base de datos.</p>
+                <code>
+            def conectar_bd():
+            &emsp;global coneccion <br>
+            &emsp;if coneccion != None:<br>
+            &emsp;&emsp;cerrarBdD()<br>
+            &emsp;coneccion = sqlite3.connect('gestion_empleados.db')<br>
+            &emsp;print("Base datos Abierta")<br>
+            &emsp;return coneccion<br>
+        </code>
+            </section>
+            <section class="second-section">
+                <header>Cerrar la conección a la base de datos </header>
+                <p>A través del siguiente código, se puede produce el cierre de la conección con la base de datos.
+                    <br>Esto es importante, por razones de seguridad.
+                </p>
+                <code>
+        def cerrarBdD():<br>
+        &emsp;coneccion.close()<br>
+        &emsp;print("Conecciones a BdD cerrada")
+        </code>
+            </section>
+        </section>
+        <section class="main-section" id="Capturas_de_pantallas">
+            <header>Capturas de pantallas</header>
+            <p>Algunas de las capturas de pantallas son las siguientes</p>
+            <img src=".\image\Captura-1.PNG" alt="">
+            <img src=".\image\Captura-2.PNG" alt="">
+            <img src=".\image\Captura-3.PNG" alt="">
+            <img src=".\image\Captura-4.PNG" alt="">
+        </section>
+    </main>
+
+</body>
+
+</html>

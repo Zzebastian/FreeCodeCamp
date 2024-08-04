@@ -1,0 +1,13 @@
+﻿.color1{ color:#7f7f7f }
+.color2{ color:#bcbcbc }
+.color3{ color:#424242 }
+.color4{ color:#7c7c7c }
+.color5{ color:#bcbcbc }
+
+body{
+    background-color: #bcbcbc;
+    color: #434343;
+}
+span{color:red;}
+header{color:green;}
+.second-section header{color:blue;}
