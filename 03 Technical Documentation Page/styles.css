@@ -1,24 +1,4 @@
-﻿.color1 {
-    color: #7f7f7f
-}
-
-.color2 {
-    color: #bcbcbc
-}
-
-.color3 {
-    color: #424242
-}
-
-.color4 {
-    color: #7c7c7c
-}
-
-.color5 {
-    color: #bcbcbc
-}
-
-body {
+﻿body {
     background-color: #bcbcbc;
     color: #434343;
 }
@@ -97,6 +77,14 @@ span {
     max-width: 75%;
     word-wrap: break-word;
 }
-@media screen {
-    
+@media screen and (max-width: 500px) {
+    nav {
+        position: relative;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    main {
+        margin-left: 20px;
+        max-width: 90%;
+    }
 }
