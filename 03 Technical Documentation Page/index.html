@@ -11,16 +11,17 @@
 <body>
     <nav id="navbar">
         <ul>
-            <header>Gestión de empleados</header>
-            <li><a class="nav-link" href="#Intro">Intro</a></li>
-            <li><a class="nav-link" href="#Consideraciones_especiales">Consideraciones especiales</a></li>
-            <li><a class="nav-link" href="#Como_transformar_todo_en_un_único_código">Como transformar todo en un único
+            <header>&ensp;Gestión de empleados</header>
+            <li><a class="nav-link" href="#Intro">&ensp;Intro</a></li>
+            <li><a class="nav-link" href="#Consideraciones_especiales">&ensp;Consideraciones especiales</a></li>
+            <li><a class="nav-link" href="#Como_transformar_todo_en_un_único_código">&ensp;Como transformar todo en un
+                    único
                     código</a></li>
-            <li><a class="nav-link" href="#Librerías_necesarias_para_operar_el_programa">Librerías necesarias para
+            <li><a class="nav-link" href="#Librerías_necesarias_para_operar_el_programa">&ensp;Librerías necesarias para
                     operar el
                     programa</a></li>
-            <li><a class="nav-link" href="#Funciones_especiales">Funciones especiales</a></li>
-            <li><a class="nav-link" href="#Capturas_de_pantallas">Capturas de pantallas</a></li>
+            <li><a class="nav-link" href="#Funciones_especiales">&ensp;Funciones especiales</a></li>
+            <li><a class="nav-link" href="#Capturas_de_pantallas">&ensp;Capturas de pantallas</a></li>
         </ul>
     </nav>
     <main id="main-doc">
@@ -62,6 +63,7 @@
                     detalle cómo funciona la capacidad de extraer datos del programa a un archivo externo.</li>
 
             </ul>
+            <a href="#intro"></a>
         </section>
         <section class="main-section" id="Consideraciones_especiales">
             <header>Consideraciones especiales</header>
@@ -76,12 +78,13 @@
             <p>Si deseas combinar todo el contenido de los archivos mencionados en un solo programa, puedes seguir estos
                 pasos:</p>
             <ol>
-                <li>Abre cada archivo en un editor de texto o IDE, incluyendo "PantallasTkinter.py", "funcionesBdD.py" y
+                <li>Abre cada archivo en un editor de texto o IDE, incluyendo <span>PantallasTkinter.py</span>,
+                    <span>funcionesBdD.py</span> y
                     cualquier otro archivo relevante para tu programa.
 
                 </li>
                 <li>Copia y pega el contenido de cada archivo en el archivo principal de tu programa,
-                    "PantallasTkinter.py".
+                    <span>PantallasTkinter.py</span>.
                     Asegúrate de pegar el contenido en los lugares adecuados, respetando la estructura y la lógica del
                     programa.
 
@@ -93,8 +96,9 @@
 
                 </li>
                 <li>Una vez que hayas combinado todo el código en un solo archivo, puedes seguir los pasos mencionados
-                    anteriormente para convertirlo en un archivo ejecutable, utilizando herramientas como PyInstaller o
-                    cx_Freeze.
+                    anteriormente para convertirlo en un archivo ejecutable, utilizando herramientas como
+                    <span>PyInstaller</span> o
+                    <span>cx_Freeze</span>.
             </ol>
             <p>Recuerda revisar y probar tu programa después de combinar los archivos para asegurarte de que todo
                 funcione
@@ -104,13 +108,13 @@
         <section class="main-section" id="Librerías_necesarias_para_operar_el_programa">
             <header>Librerías necesarias para operar el programa</header>
             <p>Para operar el programa es necesario importar diversas librerías</p>
-            <code>
+            <div class="code-space"><code>
             import os, time, hashlib, datetime <br>
             import tkinter as tk<br>
             from tkinter import ttk<br>
             from datetime import datetime <br>
             import sqlite3
-        </code>
+        </code></div>
 
         </section>
         <section class="main-section" id="Funciones_especiales">
@@ -122,9 +126,9 @@
                 <p>Esta función elimina todos los elementos en la pantalla permitiendo así que se generen nuevos, sin
                     que
                     existan problemas de compatibilidad</p>
-                <code>def borrarElementos(): <br>
+                <div class="code-space"><code>def borrarElementos(): <br>
             &emsp;for elemento in botones: <br>
-            &emsp;elemento.destroy()</code>
+            &emsp;elemento.destroy()</code></div>
             </section>
             <section class="second-section">
                 <header>Ingresar al programa</header>
@@ -133,14 +137,14 @@
                     contraseña mirando el código se utiliza un hash. Actualmente el mismo corresponde a un espacio
                     vacío.
                 </p>
-                <code>
+                <div class="code-space"><code>
             def usrPwd():<br>
             &emsp;global usuarioT, passwordT, ingreso<br>
             &emsp;user = usuarioT.get("1.0", "end")<br>
             &emsp;user = user.lower().strip()<br>
             &emsp;passw = passwordT.get("1.0", "end")<br>
             &emsp;passw = passw.strip()<br>
-            &emsp;diccionario={"":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",<br>
+            &emsp;diccionario={"": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",<br>
             &emsp;"admin": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"}<br>
             &emsp;passw = hashlib.sha256(passw.encode()).hexdigest()<br>
             
@@ -153,12 +157,12 @@
             &emsp;&emsp;ingreso = tk.Label(text="Usuario o Contraseña incorrectos", fg = "red", font = ("Times New Roman", 12, "bold"))<br>
             &emsp;&emsp;ingreso.pack()<br>
 
-        </code>
+        </code></div>
             </section>
             <section class="second-section">
                 <header>Conectar con la base de datos</header>
                 <p>A través del siguiente código, se puede produce la conección con la base de datos.</p>
-                <code>
+                <div class="code-space"><code>
             def conectar_bd():
             &emsp;global coneccion <br>
             &emsp;if coneccion != None:<br>
@@ -166,18 +170,18 @@
             &emsp;coneccion = sqlite3.connect('gestion_empleados.db')<br>
             &emsp;print("Base datos Abierta")<br>
             &emsp;return coneccion<br>
-        </code>
+        </code></div>
             </section>
             <section class="second-section">
                 <header>Cerrar la conección a la base de datos </header>
                 <p>A través del siguiente código, se puede produce el cierre de la conección con la base de datos.
                     <br>Esto es importante, por razones de seguridad.
                 </p>
-                <code>
+                <div class="code-space"><code>
         def cerrarBdD():<br>
         &emsp;coneccion.close()<br>
         &emsp;print("Conecciones a BdD cerrada")
-        </code>
+        </code></div>
             </section>
         </section>
         <section class="main-section" id="Capturas_de_pantallas">
