@@ -1,23 +1,70 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Oswald:wght@200..700&family=Playwrite+AR:wght@100..400&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
     <header id="header">
-        <img id="header-img" src="./Luz y Armonia logo.jpg" alt="">
+        <img id="header-img"
+            src="https://raw.githubusercontent.com/Zzebastian/FreeCodeCamp/main/04%20Product%20Landing%20Page/Luz%20y%20Armonia%20logo.jpg"
+            alt="">
+        <h1>Luz y Armonía</h1>
         <nav>
-
+            <ul>
+                <li> <a class="nav-link" href="">Suscribir</a></li>
+                <li> <a class="nav-link" href="">How It Works</a></li>
+                <li> <a class="nav-link" href="">Nuestras Creaciones</a></li>
+                <li> <a class="nav-link" href="">Productos</a></li>
+            </ul>
         </nav>
     </header>
     <main>
+        <div>
+            <form action="post">
+                <div>
+                    <label for="email" id="email-label" class="block"><input type="email" id="email"
+                            placeholder="Ingrese su correo electrónico" required></label>
+                </div>
+
+                <div>
+                    <input type="submit" id="submit" value="Suscribirme">
+                </div>
+            </form>
+        </div>
+        <div>
+            <div>
+                <h2>Productos hechos a mano</h2>
+            </div>
+            <div>
+                <h2>Envíos a domicilio</h2>
+            </div>
+            <div>
+                <h2>Calidad asegurada</h2>
+            </div>
+        </div>
+        <div>
+            
+        </div>
 
     </main>
     <footer>
+        <div>
+            <p>Esta web fue creada para cumplir con una etapa de certificación en <a
+                    href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-product-landing-page-project/build-a-product-landing-page">freeCodeCamp</a>,
+                por <a href="https://github.com/Zzebastian">Zzebastian</a></p>
+        </div>
 
     </footer>
 </body>
+
 </html>

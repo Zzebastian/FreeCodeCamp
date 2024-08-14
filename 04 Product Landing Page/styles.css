@@ -5,6 +5,26 @@
     --color4: #9166a5;
     --color5: #bbd4da;
 }
-#header-img{
+
+#header-img {
     width: 100px;
+}
+
+* {
+    font-family: "Grey Qo", sans-serif;
+    font-weight: bold;
+    color: var(--color3)
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    border: black 1px solid;
+}
+
+input,
+#email-label, footer * {
+    font-family: Arial, Helvetica, sans-serif;
 }
