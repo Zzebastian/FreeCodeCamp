@@ -19,20 +19,20 @@
             src="https://raw.githubusercontent.com/Zzebastian/FreeCodeCamp/main/04%20Product%20Landing%20Page/Luz%20y%20Armonia%20logo.jpg"
             alt="">
         <h1>Luz y Armonía</h1>
-        <nav>
+        <nav id="nav-bar">
             <ul>
-                <li> <a class="nav-link" href="">Suscribir</a></li>
-                <li> <a class="nav-link" href="">How It Works</a></li>
-                <li> <a class="nav-link" href="">Nuestras Creaciones</a></li>
-                <li> <a class="nav-link" href="">Productos</a></li>
+                <li> <a class="nav-link" href="#email-div">Suscribir</a></li>
+                <li> <a class="nav-link" href="#elementos-div">How It Works</a></li>
+                <li> <a class="nav-link" href="#video-div">Nuestras Creaciones</a></li>
+                <li> <a class="nav-link" href="#catalogo-div">Productos</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div>
-            <form action="post">
+        <div id="email-div">
+            <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
                 <div>
-                    <label for="email" id="email-label" class="block"><input type="email" id="email"
+                    <label for="email" id="email-label" class="block"><input type="email" id="email" name="email"
                             placeholder="Ingrese su correo electrónico" required></label>
                 </div>
 
@@ -41,7 +41,7 @@
                 </div>
             </form>
         </div>
-        <div>
+        <div id="elementos-div">
             <div>
                 <h2>Productos hechos a mano</h2>
             </div>
@@ -52,10 +52,16 @@
                 <h2>Calidad asegurada</h2>
             </div>
         </div>
-        <div>
-            
+        <div id="video-div">
+            <video id="video" width="320" height="240" controls>
+                <source src="https://github.com/Zzebastian/FreeCodeCamp/raw/main/04%20Product%20Landing%20Page/Video.mp4" type="video/mp4">
+                
+              Your browser does not support the video tag.
+              </video>
         </div>
+        <div id="catalogo-div">
 
+        </div>
     </main>
     <footer>
         <div>
