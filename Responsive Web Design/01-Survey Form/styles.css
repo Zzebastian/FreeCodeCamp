@@ -10,7 +10,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #222222;
-    background: url("\StockCake-Serene lake sunrise_1721825784.jpg-"), linear-gradient(to bottom,#d1bac4, #fcc1a5,#6280a2);
+    background: url("./StockCake-Serene lake sunrise_1721825784.jpg"), linear-gradient(to bottom,#d1bac4, #fcc1a5,#6280a2);
     /* En caso que la imagen no cargue  entonces cargará un gradiente de colores.*/
     background-size: 100% 100%;
     max-width: 600px;
