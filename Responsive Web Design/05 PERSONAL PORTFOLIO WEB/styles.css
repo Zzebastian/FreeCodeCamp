@@ -2,3 +2,5 @@
     max-width: 100px;
     max-height: 100px;
 }
+div{border: 1px solid black;}
+section{border: 1px solid red;}
