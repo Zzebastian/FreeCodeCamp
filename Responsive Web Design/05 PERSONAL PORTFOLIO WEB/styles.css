@@ -1,21 +1,14 @@
-﻿/* Seccion a borrar */
-
-
-.projects div 
-{
-    background-color: beige;
-    border: 1px solid black;
-}
-
-
-
-/* Fin sección a borrar */
+﻿
 /* Generalidades */
 :root {
     --color-fondo: grey;
     --color-texto: #fff;
+    
 }
-
+a{
+    text-decoration: none;
+    color:var(--color-texto)
+}
 body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
@@ -39,14 +32,14 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    
+
 
 }
 
 .navlink {
-    text-decoration: none;
+    
     margin-right: 20px;
-    color: var(--color-texto);
+    
 }
 
 /* Sección de bienvenida */
@@ -68,15 +61,50 @@ h1 {
     text-align: center;
     margin: 5vw 0 0 0;
 }
+
 /* Sección proyectos */
-.projects{
+.projects {
     display: flex;
-    
+
+}
+#intro {
+    text-align: justify;
+    margin: 10% 5%;
 }
 .projects div {
     width: 33vw;
+    height: 33vw;
 }
-.project-tile img{
-    max-width: 90%;
-    max-height: 90%;
+
+.project-tile {
+    text-align: center;
+
+}
+
+.project-tile img {
+    max-width: 70%;
+    max-height: 60%;
+    display: flex;
+    margin: 10% auto;
+}
+
+/* Sección Contacto */
+.cont {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 30vw;
+}
+
+.contacto {
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 760px) {
+    #welcome-section {
+        height: 40vw;
+        padding: 15vw 0 0 0;
+    }   
 }
