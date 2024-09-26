@@ -79,14 +79,21 @@ const allSongs = [
 ];
 
 const audio = new Audio();
+// new: crea un objeto y lo inicializa, es decir, crea objetos a partir de una plantilla
+// Audio() es una de esas plantillas.
 let userData = {
   songs: [...allSongs],
+  // JS permite usar o no las comillas si la clave es una cadena de texto válida, por lo tanto "songs" y songs son equivalentes
+  
+  // los "..." se utilizan para descomponer el array allSongs en elementos individuales. Esto significa que si allSongs contiene [song1, song2, song3], el resultado será {"songs": [song1, song2, song3]}.
+  // si no se utilizan, queda un array dento de otro
   currentSong: null,
   songCurrentTime: 0,
 };
 
 const playSong = (id) => {
   const song = userData?.songs.find((song) => song.id === id);
+  // el "?" hace que no de error si la variable solicitada es nula o indefinida
   audio.src = song.src;
   audio.title = song.title;
 
@@ -97,6 +104,7 @@ const playSong = (id) => {
   }
   userData.currentSong = song;
   playButton.classList.add("playing");
+  // classList.add añade la clase "playing" al contenido de html 
 
   highlightCurrentSong();
   setPlayerDisplay();
@@ -195,7 +203,9 @@ const highlightCurrentSong = () => {
   );
 
   playlistSongElements.forEach((songEl) => {
+    // El método forEach llama a una función, la cual puede o no ser un arrow
     songEl.removeAttribute("aria-current");
+    // "aria-current" es un atributo HTML, y "true" el valor del mismo
   });
 
   if (songToHighlight) songToHighlight.setAttribute("aria-current", "true");
@@ -269,6 +279,7 @@ setPlayButtonAccessibleText();
 
 const sortSongs = () => {
   userData?.songs.sort((a,b) => {
+    // sort ordena, pero como argumento se le puede dar alguna forma de cómo hacerlo, en este caso, se realiza por "title"
     if (a.title < b.title) {
       return -1;
     }
