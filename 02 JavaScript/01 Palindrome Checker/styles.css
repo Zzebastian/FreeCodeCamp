@@ -1,1 +1,67 @@
 ﻿
+:root {
+    --building-color1: #151c36;
+    --building-color2: #485778;
+    --building-color3: #abb1bc;
+    --building-color4: #fff8e6;
+    --building-color5: #fbdcc4;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--building-color5);
+}
+
+.texto,
+.explicacion {
+    color: var(--building-color1);
+    max-width: min(60vw, 400px);
+    margin-left: auto;
+    margin-right: auto;
+
+}
+input, button, #result {
+    font-size: large;
+}
+#result {
+    margin-top: 5%;
+    color: var(--building-color2)
+}
+.texto {
+    text-align: center;
+    margin-top: 10%;
+}
+.texto input, .texto button {
+    margin-top: 2%;
+}
+
+.explicacion {
+    text-align: justify;
+}
+
+.centrado {
+    text-align: center;
+    margin: 0;
+}
+footer div {
+    text-align: justify;
+    position: absolute;
+    bottom: 0;
+    padding: 2%;
+}
+
+@media (max-width: 400px) {
+    * {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    footer div {
+        position: relative;
+    }
+    input {
+        max-width: 60vw;
+    }
+}
