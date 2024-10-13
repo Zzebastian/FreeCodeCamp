@@ -80,6 +80,7 @@ const checkUserInput = () => {
 convertBtn.addEventListener("click", checkUserInput);
 
 numberInput.addEventListener("keydown", (e) => {
+  // 'keydown' funciona cada vez que se presiona una tecla.
   if (e.key === "Enter") {
     checkUserInput();
   }
