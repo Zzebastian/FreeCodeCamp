@@ -1,3 +1,31 @@
-﻿*{
-    border: 1px solid pink
+﻿
+
+* {
+    background-color: gray;
+    color:beige
+}
+
+
+
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.ingreso input,
+.ingreso button {
+    background-color: beige;
+    color: black;
+    display: block;
+    text-align: center;
+    margin: 10px auto;
+    font-size: larger;
+}
+
+footer div {
+    text-align: justify;
+    position: absolute;
+    bottom: 0;
+    padding: 2%;
 }
