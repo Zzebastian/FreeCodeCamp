@@ -1,22 +1,27 @@
 ﻿const button = document.getElementById("convert-btn");
-const number = document.getElementById("number");1001
+const number = document.getElementById("number");
 const output = document.getElementById("output")
-const romanos = [{ letra: "M", numero: 1000 },
-{ letra: "D", numero: 500 },
-{ letra: "C", numero: 100 },
-{ letra: "L", numero: 50 },
-{ letra: "X", numero: 10 },
-{ letra: "V", numero: 5 },
-{ letra: "I", numero: 1 },]
+const romanos = [{ letra: "M", numero: 1000, indice: 2 },
+{ letra: "D", numero: 500, indice: 2 },
+{ letra: "C", numero: 100, indice: 4 },
+{ letra: "L", numero: 50, indice: 4 },
+{ letra: "X", numero: 10, indice: 6},
+{ letra: "V", numero: 5, indice: 6},
+{ letra: "I", numero: 1, indice: 7},
+{ letra: "", numero: 0, indice: 7},]
 
 
 const convertir = (value, index) => {
-    // console.log(number);
-    // console.log(romanos[index].letra);
+    if (index === 7) return
     
+    const scnIndex = romanos[index].indice
     if (value >= romanos[index].numero) {
         output.innerText += romanos[index].letra
         convertir(value -romanos[index].numero, index)
+    } else if (value >= romanos[index].numero-romanos[scnIndex].numero) {
+        output.innerText += romanos[scnIndex].letra
+        output.innerText += romanos[index].letra
+        convertir(value -(romanos[index].numero-romanos[scnIndex].numero),index+1)
     } else convertir(value, index+1)
 }
 
@@ -30,5 +35,5 @@ const director = () => {
 }
 
 button.addEventListener("click", director);
-
+number.addEventListener("keydown",(e)=>{if (e.key==="Enter"){director()}})
 
