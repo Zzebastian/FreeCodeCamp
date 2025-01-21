@@ -14,13 +14,18 @@ const taskData = JSON.parse(localStorage.getItem("data")) || [];
 let currentTask = {};
 // De esta forma, si no hay información, va a actuar el "||" y generar un array en blanco
 
+const removeSpecialChars = (val) => {
+  //Elimina todos los caracteres especiales ingresados
+  return val.trim().replace(/[^A-Za-z0-9\-\s]/g, '')
+}
+
 const addOrUpdateTask = () => {
   const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
   const taskObj = {
-    id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
-    title: titleInput.value,
-    date: dateInput.value,
-    description: descriptionInput.value,
+    id: `${removeSpecialChars(titleInput.value).toLowerCase().split(" ").join("-")}-${Date.now()}`,
+    title: removeSpecialChars(titleInput.value),
+    date: removeSpecialChars(dateInput.value),
+    description: removeSpecialChars(descriptionInput.value),
   };
 
   if (dataArrIndex === -1) {
