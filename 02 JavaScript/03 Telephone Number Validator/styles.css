@@ -1,0 +1,11 @@
+* {
+    border-color: red;
+    
+}
+h1,p {
+    border-color: blue;
+    background-color: grey;
+}
+div {
+    border-color:aquamarine
+}
