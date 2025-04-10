@@ -1,11 +1,46 @@
-* {
-    border-color: red;
+
+
+
+.carcasa {
+    
+    border-style: none;
+    border-radius: 10%;
+    background-color: black;
+    width: 35vw;
+    height: 70vw;
+    text-align: center;
+    display: flex;
+    margin: auto;
+}
+.telefono {
+    border-style: none;
+    border-radius: 10%;
+    background-color: antiquewhite;
+    width: 30vw;
+    height: 60vw;
+    margin: 5vw  2.5vw;
+    padding: 0;
     
 }
-h1,p {
+
+.telefono div {
     border-color: blue;
-    background-color: grey;
+    size: 100%;
 }
-div {
-    border-color:aquamarine
+
+input {
+    background-color: rgb(241, 212, 173);
+    border: none;
+    width: 25vw;
+    margin: 5vw 2.5vw;
+}
+
+
+
+.camara {
+    border-color: blue;
+    border-style: solid;
+    /* border-radius: 100%; */
+    width: 5vw;
+    height: 5vw;
 }
